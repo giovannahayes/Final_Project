@@ -24,6 +24,22 @@
       background-color: lightgray;
   }
 
+  .navbar{
+    max-height: 50px; 
+	background-color: #cacccb; 
+    font-size: 20px; 
+    }
+
+.navigation .navbar-brand{
+	color: navy; 
+	margin-left: 50px; 
+	padding: inherit; 
+	font-weight: bold; 
+	background-color: #054833;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+  
   .container {
     justify-content: space-evenly;
 }
