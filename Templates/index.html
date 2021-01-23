@@ -1,12 +1,9 @@
-<!doctype html> 
-<!-- <html lang = "en" -->
-  <html lang="en-us">
-
-  <head>
+<!doctype html>
+<html lang = "en">
+   <head>
      <!-- Required meta tags -->
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link rel="stylesheet" href="style.css">
@@ -17,9 +14,8 @@
           background-image: url(https://cdn.hipwallpaper.com/i/54/58/J2YQU0.jpg);
         }
         </style>
-  </head>
-<body> 
-
+    </head> 
+<body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light" >
     <a class="navbar-brand ml-4"  href="index.html">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +24,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mr-4">
-          <a class="nav-link" href="ourstory.html">Our Story</a>
+          <a class="nav-link" href="ourstory.html">Our Project</a>
         </li>
         <li class="nav-item mr-4">
           <a class="nav-link" href="data.html">Data</a>
@@ -51,76 +47,73 @@
     </div>
   </nav>
 <br>
-    <h1>Loan Approval</h1> 
-  
-<div> 
-
+    <h1>Loan Approval</h1>
+<div>
   <form action = "{{url_for('predict')}}" method ="POST" >
-    <label for="Loan Amount">Loan Amount</label>
-    <input type="number" class="form-control" id="loan amount" name="loan amount" required>
-    <br> 
-    <label for="Loan Term">Loan Term</label>
-    <input type="number" class="form-control" id="loan term" name="loan term" required>
-    <br> 
-    <label for="Income">Income</label>
-    <input type="number" class="form-control" id="imcome" name="income" required>
-    <br> 
-    <label for="Income">Co Applicant Income</label>
-    <input type="number" class="form-control" id="income" name="income" required>
-    <br> 
-    <label for="gender">Gender</label> 
-    <select id="gender" name="gender"> 
-      <option value="0">Male</option> 
-      <option value="1">Female</option> 
-   </select> 
-   <br> 
-    <label for="married">Married</label> 
-    <select id="married" name="married"> 
-      <option value="0">No</option> 
-      <option value="1">Yes</option> 
-    </select> 
-      <br>  
-    <label for="dependents">Dependents</label> 
-    <select id="dependents" name="dependents"> 
-      <option value="0">1</option> 
-      <option value="1">2</option> 
-      <option value="2">3</option> 
-    </select> 
-    <br> 
-    <label for="education">Education</label> 
-    <select id="education" name="education"> 
-      <option value="0">Not Graduate</option> 
-      <option value="1">Graduate</option> 
-    </select> 
-    <br> 
-    <label for="self_employed">Self Employed</label> 
-    <select id="self_employed" name="self_employed"> 
-      <option value="0">No</option> 
-      <option value="1">Yes</option> 
-    </select> 
-    <br> 
-    <label for="Credit_History">Credit History</label> 
-    <select id="Credit_History" name="Credit_History"> 
-      <option value="0">No</option> 
-      <option value="1">Yes</option> 
-    </select> 
+    <label for="Loan_Amount">Loan Amount</label>
+    <input type="number" class="form-control" id="Loan_Amount" name="Loan_Amount" required>
     <br>
-    <label for="Property_Area">Property Area</label> 
-    <select id="Property_Area" name="Property_Area"> 
-      <option value="0">Rural</option> 
-      <option value="1">Semiurban</option> 
-      <option value="2">Urban</option> 
-    </select> 
+    <label for="Loan_Amount_Term" >Loan Term</label>
+    <input type="number" class="form-control" id="Loan_Amount_Term" name="Loan_Amount_Term" required>
+    <br>
+    <label for="ApplicantIncome">Income</label>
+    <input type="number" class="form-control" id="ApplicantIncome"name="ApplicantIncome"required>
+    <br>
+    <label for="CoapplicantIncome">Co Applicant Income</label>
+    <input type="number" class="form-control" id="CoapplicantIncome"name="CoapplicantIncome" required>
+    <br>
+    <label for="Gender">Gender</label>
+    <select id="Gender" name="Gender"required>
+      <option value="0">Male</option>
+      <option value="1">Female</option>
+   </select>
+   <br>
+    <label for="Married">Married</label>
+    <select id="Married"name="Married" required>
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select>
+      <br>
+    <label for="Dependents">Dependents</label>
+    <select id="Dependents" name="Dependents"required>
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+    </select>
+    <br>
+    <label for="Education">Education</label>
+    <select id="Education" name="Education" required>
+      <option value="0">Not Graduate</option>
+      <option value="1">Graduate</option>
+    </select>
+    <br>
+    <label for="Self_Employed">Self Employed</label>
+    <select id="Self_Employed" name="Self_Employed" required>
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select>
+    <br>
+    <label for="Credit_History">Credit History</label>
+    <select id="Credit_History" name="Credit_History" required>
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select>
+    <br>
+    <label for="Property_Area">Property Area</label>
+    <select id="Property_Area" name="Property_Area" required>
+      <option value="0">Rural</option>
+      <option value="1">Semiurban</option>
+      <option value="2">Urban</option>
+    </select>
    <br>
     <div class="form-group">
     <input class="btn btn-primary" type="submit" value="Result">
     </div>
-    
     <!--Prediction Result-->
     <div id ="result">
       <strong style="color:red">{{result}}</strong>
    </div>
-  </form> 
-</div> 
-</body> 
-</html> 
+  </form>
+</div>
+</body>
+</html>
