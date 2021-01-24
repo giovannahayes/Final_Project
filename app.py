@@ -3,7 +3,7 @@ import pickle
 from flask import Flask, request, render_template
 
 # Create app
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Templates')
 
 # Use pickle to load in the pre-trained model.
  
