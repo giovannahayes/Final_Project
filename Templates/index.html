@@ -4,52 +4,47 @@
      <!-- Required meta tags -->
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!-- Bootstrap CSS -->
+      <!-- Bootstrap CSS  -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <link rel="stylesheet" href="style.css">
-      <title>Loan Approval</title>
-      <style>
-        body {
-          /* background-color: lightblue */
-          background-image: url(https://cdn.hipwallpaper.com/i/54/58/J2YQU0.jpg);
-        }
-        </style>
+      <link rel="stylesheet" href="style.css"> 
+    
     </head> 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-    <a class="navbar-brand ml-4"  href="index.html">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item mr-4">
-          <a class="nav-link" href="ourstory.html">Our Project</a>
-        </li>
-        <li class="nav-item mr-4">
+
+    <!-- Start of navbar  -->
+    <div class="navigation">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-Dark">
+          <a class="navbar-brand ml-4"  href="index.html">Home</a>
+          <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  ​
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+             
+              <li class="nav-item mr-4">
+                  <a class="nav-link" href="ourstory.html">Our Project</a>
+                </li>
+              <li class="nav-item">
           <a class="nav-link" href="data.html">Data</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="comparison.html">Visualizations</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Machine Learning Models
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="temperature.html">Max Temperature</a>
-              <a class="dropdown-item" href="humidity.html">Humidity</a>
-              <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-              <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
-            </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-<br>
-    <h1>Loan Approval</h1>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="comparison.html">Visualizations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="mlindex.html">Machine Learning Models</a>
+                </li>
+            </ul>
+          </div>
+        </nav>
+    </div> 
+ 
+    <h1>Loan Approval Form</h1>
 <div>
   <form action = "{{url_for('predict')}}" method ="POST" >
+    <feildset>
+    <legend>Personal Information</legend>
     <label for="Loan_Amount">Loan Amount</label>
     <input type="number" class="form-control" id="Loan_Amount" name="Loan_Amount" required>
     <br>
@@ -76,9 +71,10 @@
       <br>
     <label for="Dependents">Dependents</label>
     <select id="Dependents" name="Dependents"required>
-      <option value="0">1</option>
-      <option value="1">2</option>
-      <option value="2">3</option>
+      <option value = "0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="">3</option>
     </select>
     <br>
     <label for="Education">Education</label>
@@ -112,6 +108,7 @@
     <!--Prediction Result-->
     <div id ="result">
       <strong style="color:red">{{result}}</strong>
+    </feildset>
    </div>
   </form>
 </div>
