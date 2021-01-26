@@ -1,96 +1,187 @@
 <!doctype html>
-<html lang = "en">
-   <head>
-     <!-- Required meta tags -->
-     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!-- Bootstrap CSS  -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <link rel="stylesheet" href="style.css"> 
-    
-    </head> 
-<body> 
- 
-<!-- Start of navbar -->
-  <div class="navigation">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-Dark">
-        <a class="navbar-brand ml-4"  href="index.html">Home</a>
-        <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="style.css">  -->
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/style.css')}}">
+  <style>
+    body {
+      background-image: url(https://computrack.ca/wp-content/uploads/2015/07/White-office-Background.jpg);
+    }
+
+    /* includes headers, pictures, and text   */
+    main {
+      width: 850px;
+      margin: 50px auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black
+    }
+
+    h2 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      font-size: 28
+    }
+
+    p {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      font-size: 20px
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Start of navbar  -->
+  <header>
+    <div class="navigation">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-Dark">
+        <a class="navbar-brand ml-4" href="/">Home</a>
+        <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-​
+        ​
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
-           
+
+            <!-- <li class="nav-item mr-4">
+              <a class="nav-link" href="/index">Home</a>
+            </li> -->
             <li class="nav-item mr-4">
-                <a class="nav-link" href="ourstory.html">Our Project</a>
-              </li>
-            <li class="nav-item">
-        <a class="nav-link" href="data.html">Data</a>
+              <a class="nav-link" href="/project">Our Project</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="comparison.html">Visualizations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="mlindex.html">Machine Learning Models</a>
-              </li>
+              <a class="nav-link" href="/data">Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/visualizations">Visualizations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/models">Machine Learning Models</a>
+            </li>
           </ul>
         </div>
       </nav>
-  </div> 
+  </header>
+  </div>
+
 
   <!-- <h3>Machine Learning Models</h3> -->
 
-  <h3>Leveraging ML</h3>
+  <main>
+    
 
-  <p>Machine learning can extract deep, complex insights out of data to help make decisions. In many cases, using more advanced models delivers real business value through significantly improving on traditional regression models. The growing adoption of ML and deep learning (DL) prediction models is due to their ability to take advantage of large datasets to learn patterns with higher accuracy than many prior techniques.These models, such as random forests, may embody thousands of decision points and deep learning models take that to the extreme, feeding data through multiple non-linear tensor transformations with millions of parameters derived iteratively from the training data. Simplifying the explanations of ML and DL classifiers has become important to simplify the complexity and making these more accurate techniques adoptable in practice of predicting loan delinquency. Our team compared the complexity,accuracy and impact of random forest, SVM and deep learning models to understand which would be the most applicable model to choose to use for our web app. The notes below are our thoughts on the comparison of the models. 
+      <h2><b>Leveraging Machine Learning</b></h2>
 
-    </p>
-
-
-  <article>
-    <a target="_blank" href="./images/mlgif.gif">
-      <img src="./images/mlgif.gif" alt="Cloudy Map">
-    </a>
-    </article>
-
-    <h3>Random Forest and SVM</h3>
-
-    <p>We felt that random forests was the "worry-free" approach, if such a thing exists in ML: There were few hyperparameters to tune with the  exception of for the number of trees. We found the more trees we layered, the more accurate our model became,. . On the contrary, there are a lot of knobs to be turned in SVMs: Choosing the "right" kernel, regularization penalties and the slack variable layered complexity in configuring the model. 
-      Both the random forests’ and SVMs’ complexity grows as one increases the number of training samples. Also, we found it can be easy to end up with a lot of support vectors in SVMs and in the worst-case scenario, we could have as many support vectors as we have samples in the training set. Typically with SVMs one has to train an SVM for each class and in contrast random forests can handle multiple classes straight out the gate.
-      In short, the complexity of a random forest grows with the number of trees in the forest, and the number of training samples available. We conclude that SVMs are great for relatively small data sets with fewer outliers. Random forests may require more data but they almost always come up with a pretty robust model and we found random forests are much simpler to train and it's easier to find a good, robust model.
-      
-  
-      </p>
-  
-  
-    <article>
-      <a target="_blank" href="./images/svm.PNG">
-        <img src="./images/svm.PNG" alt="Cloudy Map">
-      </a>
+      <article>
+        <a target="_blank" href="static/images/mlgif.gif">
+          <img src="static/images/mlgif.gif" alt="ML Image" width="600" height="400">
+        </a>
       </article>
-    
+
+      <p><b>Machine learning can extract deep, complex insights out of data to help make decisions. In many cases, using
+          more advanced models delivers real business value through significantly improving on traditional regression
+          models. The growing adoption of ML and deep learning (DL) prediction models is due to their ability to take
+          advantage of large datasets to learn patterns with higher accuracy than many prior techniques.These models,
+          such as random forests, may embody thousands of decision points and deep learning models take that to the
+          extreme, feeding data through multiple non-linear tensor transformations with millions of parameters derived
+          iteratively from the training data. Simplifying the explanations of ML and DL classifiers has become important
+          to simplify the complexity and making these more accurate techniques adoptable in practice of predicting loan
+          delinquency. Our team compared the complexity,accuracy and impact of random forest, SVM and deep learning
+          models to understand which would be the most applicable model to choose to use for our web app. The notes
+          below are our thoughts on the comparison of the models.
+
+        </b></p>
+
+
+     
+      <h2><u><b>Random Forest</u></b></h2>
+
+      <br>
+      <p><b>We felt that random forests was the "worry-free" approach, if such a thing exists in ML: There were few
+          hyperparameters to tune with the exception of for the number of trees. We found the more trees we layered, the
+          more accurate our model became,. . On the contrary, there are a lot of knobs to be turned in SVMs: Choosing
+          the "right" kernel, regularization penalties and the slack variable layered complexity in configuring the
+          model.
+          Both the random forests’ and SVMs’ complexity grows as one increases the number of training samples. Also, we
+          found it can be easy to end up with a lot of support vectors in SVMs and in the worst-case scenario, we could
+          have as many support vectors as we have samples in the training set. Typically with SVMs one has to train an
+          SVM for each class and in contrast random forests can handle multiple classes straight out the gate.
+          In short, the complexity of a random forest grows with the number of trees in the forest, and the number of
+          training samples available. We conclude that SVMs are great for relatively small data sets with fewer
+          outliers. Random forests may require more data but they almost always come up with a pretty robust model and
+          we found random forests are much simpler to train and it's easier to find a good, robust model.
+
+
+        </b></p>
+
+
       <article>
-        <a target="_blank" href="./images/rf.PNG">
-          <img src="./images/rf.PNG" alt="Cloudy Map">
+        <a target="_blank" href="static/images/svm.PNG">
+          <img src="static/images/svmmodel.png" alt="SVM" width="350" height="350">
         </a>
-        </article>
-
-      <h3>Deep Learning</h3>
-
-      <p>Deep learning algorithms require "relatively" large datasets to work well. Also, deep learning algorithms require much more experience: Setting up a neural network using deep learning algorithms is more tedious than using classifiers such as random forests and SVMs. On the other hand, deep learning really shines when it comes to solving complex problems. Deep neural networks are really good at detecting outliers on complex and highly unstructured data. Another advantage is that you have to worry less about the feature engineering piece. The one detractor and difficulty lies in the fact that deep learning models used within regulated financial markets need to have a certain level of explainability. Regulators require lenders to present sound arguments on why the credit decision is considered fair and unbiased however deep neural networks act as black-box models and data scientists find it hard to explain the reasons behind an output. Again, in practice, the decision we found that deciding which classifier to choose really depends on our dataset and the general level complexity of our problem. In practice we decided to start with the simplest model and continued to try more complex models until we found the model with the highest degree of accuracy.
-    
-        </p>
-    
-    
-      <article>
-        <a target="_blank" href="./images/dnn.PNG">
-          <img src="./images/dnn.PNG" alt="Cloudy Map">
+        <a target="_blank" href="static/images/rf.PNG">
+          <img src="static/images/rfmodel.png" alt="rfmodel" width="350" height="350">
         </a>
-        </article>
+      </article>
 
-        <p>(Caruana, 2006)
-        <p>(Raschka)
+      <!-- <article>
+        <a target="_blank" href="static/images/rf.PNG">
+          <img src="static/images/rf.PNG" alt="Cloudy Map" width="230" height="230">
+        </a>
+      </article> -->
 
+      <!-- <div>
+        <article class="deva-pics">
+          <a href="/project">
+            <img src="static/images/Gianna7.png" alt="Alicia" width="230" height="230">
+          </a>
+          <a href="images/Alicia.png">
+            <img src="static/images/Pooja8.png" alt="Alicia" width="230" height="230"></a>
+          <a href="images/Alicia.png">
+            <img src="static/images/Alicia7.png" alt="Alicia" width="230" height="230">
+          </a>
+        </article> -->
   
+
+      <h2><b><u>Deep Learning</u></b></h2>
+      <br>
+      <p><b>Deep learning algorithms require "relatively" large datasets to work well. Also, deep learning algorithms
+          require much more experience: Setting up a neural network using deep learning algorithms is more tedious than
+          using classifiers such as random forests and SVMs. On the other hand, deep learning really shines when it
+          comes to solving complex problems. Deep neural networks are really good at detecting outliers on complex and
+          highly unstructured data. Another advantage is that you have to worry less about the feature engineering
+          piece. The one detractor and difficulty lies in the fact that deep learning models used within regulated
+          financial markets need to have a certain level of explainability. Regulators require lenders to present sound
+          arguments on why the credit decision is considered fair and unbiased however deep neural networks act as
+          black-box models and data scientists find it hard to explain the reasons behind an output. Again, in practice,
+          the decision we found that deciding which classifier to choose really depends on our dataset and the general
+          level complexity of our problem. In practice we decided to start with the simplest model and continued to try
+          more complex models until we found the model with the highest degree of accuracy.
+
+        </b></p>
+
+
+      <article>
+        <a target="_blank" href="static/images/dnn.PNG">
+          <img src="static/images/dnnmodel.png" alt="dnn"width="450" height="450">
+        </a>
+      </article>
+
+      <p>(Caruana, 2006)
+      <p>(Raschka)

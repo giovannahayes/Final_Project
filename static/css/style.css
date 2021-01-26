@@ -1,4 +1,9 @@
-  .navbar{
+ header{
+     height: 70px;
+     background-color: black
+ }
+ 
+ .navbar{
     max-height: 100px; 
 	/* background-color: #cacccb;  */
     font-size: 20px; 
@@ -10,7 +15,7 @@
 	margin-left: 50px; 
 	padding: inherit; 
     font-weight: bold; 
-    max-height: 100px; 
+    max-height: 70px; 
 	background-color: black;
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -49,15 +54,28 @@ form  {
   }
 
 
-  h1
+  /* h1
 {
   margin-top: 100px;  /* or whatever amount you need it to move down */
-  color: black
-}
+  /* color: black */
+/* } */ *
 
 .text-info {
     color:black
 }
+
+/* Ourstory HTML Format */
+
+/* main{
+    width: 700px;
+    margin: 50 px auto
+}
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black
+} */
   
   /* input {
     margin: 5px;
@@ -78,23 +96,11 @@ h2, article{
     margin-top: 100px
   }
 
-  img{
-    margin: 50px 50px 50px 50px;
-  }
+img{
+    margin: 25px 25px 25px 25px;
+  } 
  
-  .loan-project{
-    color: black; 
-    font-style: inherit;
-    font-size: 50px
-
-  }
-
-  .team-devas{
-    color: black; 
-    font-style: bold;
-    font-size: 50px
-
-  }
+ 
 
   .container {
     justify-content: space-evenly;

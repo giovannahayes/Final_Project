@@ -8,61 +8,98 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel = "stylesheet" type="text/css" href ="{{url_for('static', filename = 'css/style.css')}}">
+  <style>
+    body {
+      background-image: url(https://computrack.ca/wp-content/uploads/2015/07/White-office-Background.jpg);
+    }
+
+    /* includes headers, pictures, and text   */
+    main {
+      width: 850px;
+      margin: 50px auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black
+    }
+
+    h2 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      font-size: 28
+    }
+
+    p {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      font-size: 20px
+    }
+  </style>
+
 
 </head>
 
 <body>
 
 
-  <div class="navigation">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-Dark">
-        <a class="navbar-brand ml-4"  href="index.html">Home</a>
-        <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+   <!-- Start of navbar  -->
+   <header>
+    <div class="navigation">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-Dark">
+        <a class="navbar-brand ml-4" href="/">Home</a>
+        <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-​
+        ​
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
-           
+
             <li class="nav-item mr-4">
-                <a class="nav-link" href="ourstory.html">Our Project</a>
-              </li>
-            <li class="nav-item">
-        <a class="nav-link" href="data.html">Data</a>
+              <a class="nav-link" href="/project" index.html was in here originally>Our Project</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="comparison.html">Visualizations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="mlindex.html">Machine Learning Models</a>
-              </li>
+              <a class="nav-link" href="/data">Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/visualizations">Visualizations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/models">Machine Learning Models</a>
+            </li>
           </ul>
         </div>
       </nav>
-  </div> 
+  </header>
+  </div>
 
+  <main>
+    
+  <h2><b>Exploratory Data Analysis(EDA)</b></h2>
 
-<div class="w3-container">
-  <h2><b><u>Exploratory Data Analysis(EDA)</u></b></h2>
-
-  <img src="./images/Bar chart of Loan Status.png" class="w3-round-small" alt="Loan Status" style="width:30%">
-  <img src="./images/Count of Loan approval by Gender.png" class="w3-round-small" alt="Norway" style="width:30%">
-  <img src="./images/Barchart of Education.png" class="w3-round-small" alt="Norway" style="width:30%">
+  <img src="static/images/Bar chart of Loan Status.png"  alt="Loan Status" width="350" height="350">
+  <img src="static/images/Count of Loan approval by Gender.png"  alt="Gender" width="350" height="350">
+  <img src="static/images/Barchart of Education.png"  alt="Gender" width="350" height="350">
   
   <p><b>30% of loan applicants in the dataset were denined and 70% were approved. Of those that were approved, 85% of those applicants were male. 22% of loan applicants did not graduate.
      There is a correlation between the rate of approval and the penetration of laon applicants who did graduate.</b></p>
   
   
-  <img src="./images/Boxplot of Loanstatus depends on ApplicantIncome.png" class="w3-round-small" alt="Loan Status" style="width:30%">
-  <img src="./images/Boxplot of Loanstatus depends on LoanAmount.png" class="w3-round-small" alt="Norway" style="width:30%">
-  <img src="./images/Boxplot of Education level against ApplicantIncome.png" class="w3-round-small" alt="Norway" style="width:30%">
+  <img src="static/images/Boxplot of Loanstatus depends on ApplicantIncome.png"  alt="Loan Status" width="350" height="350">
+  <img src="static/images/Boxplot of Loanstatus depends on LoanAmount.png"  alt="Boxplot Loanamoutn" width="350" height="350">
+  <img src="static/images/Boxplot of Education level against ApplicantIncome.png"  alt="Boxplot ApplicationINcome" width="350" height="350">
   <p><b>Our box plot charts helped us to understand where our outliers exist within our dataset and across our correlated metrics. The applicants who graduated 
      do not have a standarized mean and a great range of outliers with where these graduates are positioned with their annual income. There are similarities with where
     the mean falls with our dataset's loan applicant's income and redquested loan amount. The means are similar and outlier range is limited.</b></p>
 
-  <img src="./images/Heatmap.png" class="w3-round-small" alt="Loan Status" style="width:30%">
+  <img src="static/images/Heatmap.png"  alt="Loan Status" width="350" height="350">
   <p><b>The heatmap above was used to check for multicollinearity. The heat map does not indicate a high correclation between any of the loan attributes. This indicates no possible problem of the 
     multicollinearity nor a need for further investigation. </b>
   </p>
