@@ -1,7 +1,7 @@
 # Loan Approval Prediction:
 ## Machine Learning Data Analytics Project
 
-![ML](static\images\mlgif.gif)
+![ML](https://github.com/giovannahayes/Final_Project/blob/main/static/images/mlgif.gif)
 
 
 ## Team members: Alicia Smith, Pooja Patel, Giovanna Hayes
