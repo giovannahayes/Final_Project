@@ -1,133 +1,134 @@
 <!doctype html>
-<html lang = "en">
-   <head>
-     <!-- Required meta tags -->
-     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!-- Bootstrap CSS  -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <!-- <link rel="stylesheet" href="style.css">  -->
-      <link rel = "stylesheet" type="text/css" href ="{{ url_for('static', filename = 'css/style.css')}}">
-      <style>
-       
-    
-        /* includes headers, pictures, and text   */
-        main {
-          width: 700px;
-          margin: 50px auto;
-        }
-        </style>
-    </head> 
-  <!-- Start of navbar  -->
-  <header>
-    <div class="navigation">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-Dark">
-        <a class="navbar-brand ml-4" href="/">Home</a>
-        <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        ​
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ml-auto">
+<html lang="en">
 
-            <!-- <li class="nav-item mr-4">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="style.css">  -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css')}}">
+  <style>
+    /* includes headers, pictures, and text   */
+    main {
+      width: 700px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<!-- Start of navbar  -->
+<header>
+  <div class="navigation">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-Dark">
+      <a class="navbar-brand ml-4" href="/">Home</a>
+      <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      ​
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+
+          <!-- <li class="nav-item mr-4">
               <a class="nav-link" href="/index">Home</a>
             </li> -->
-            <li class="nav-item mr-4">
-              <a class="nav-link" href="/project">Our Project</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/data">Data</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/visualizations">Visualizations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/models">Machine Learning Models</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-  </header>
+          <li class="nav-item mr-4">
+            <a class="nav-link" href="/project">Our Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/data">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/visualizations">Visualizations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/models">Machine Learning Models</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</header>
+</div>
+
+
+<main>
+  <h1><b>Loan Approval Form</b></h1>
+  <div>
+    <form action="{{url_for('predict')}}" method="POST">
+      <feildset>
+        <legend>Personal Information</legend>
+        <label for="Loan_Amount">Loan Amount</label>
+        <input type="number" class="form-control" id="Loan_Amount" name="Loan_Amount" required>
+        <br>
+        <label for="Loan_Amount_Term">Loan Term</label>
+        <input type="number" class="form-control" id="Loan_Amount_Term" name="Loan_Amount_Term" required>
+        <br>
+        <label for="ApplicantIncome">Income</label>
+        <input type="number" class="form-control" id="ApplicantIncome" name="ApplicantIncome" required>
+        <br>
+        <label for="CoapplicantIncome">Co Applicant Income</label>
+        <input type="number" class="form-control" id="CoapplicantIncome" name="CoapplicantIncome" required>
+        <br>
+        <label for="Gender">Gender</label>
+        <select id="Gender" class="form-control" name="Gender" required>
+          <option value="0">Male</option>
+          <option value="1">Female</option>
+        </select>
+        <br>
+        <label for="Married">Married</label>
+        <select id="Married" class="form-control" name="Married" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+        <br>
+        <label for="Dependents">Dependents</label>
+        <select id="Dependents" class="form-control" name="Dependents" required>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="">3</option>
+        </select>
+        <br>
+        <label for="Education">Education</label>
+        <select id="Education" class="form-control" name="Education" required>
+          <option value="0">Not Graduate</option>
+          <option value="1">Graduate</option>
+        </select>
+        <br>
+        <label for="Self_Employed">Self Employed</label>
+        <select id="Self_Employed" class="form-control" name="Self_Employed" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+        <br>
+        <label for="Credit_History">Credit History</label>
+        <select id="Credit_History" class="form-control" name="Credit_History" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+        <br>
+        <label for="Property_Area">Property Area</label>
+        <select id="Property_Area" class="form-control" name="Property_Area" required>
+          <option value="0">Rural</option>
+          <option value="1">Semiurban</option>
+          <option value="2">Urban</option>
+        </select>
+        <br>
+
+
+        <input class="btn btn-primary" type="submit" value="Submit">
   </div>
-
-
- <main>
-    <h1>Loan Approval Form</h1>
-<div>
-  <form action = "{{url_for('predict')}}" method ="POST" >
-    <feildset>
-    <legend>Personal Information</legend>
-    <label for="Loan_Amount">Loan Amount</label>
-    <input type="number" class="form-control" id="Loan_Amount" name="Loan_Amount" required>
-    <br>
-    <label for="Loan_Amount_Term" >Loan Term</label>
-    <input type="number" class="form-control" id="Loan_Amount_Term" name="Loan_Amount_Term" required>
-    <br>
-    <label for="ApplicantIncome">Income</label>
-    <input type="number" class="form-control" id="ApplicantIncome"name="ApplicantIncome"required>
-    <br>
-    <label for="CoapplicantIncome">Co Applicant Income</label>
-    <input type="number" class="form-control" id="CoapplicantIncome"name="CoapplicantIncome" required>
-    <br>
-    <label for="Gender">Gender</label>
-    <select id="Gender" class="form-control" name="Gender"required>
-      <option value="0">Male</option>
-      <option value="1">Female</option>
-   </select>
-   <br>
-    <label for="Married">Married</label>
-    <select id="Married"class="form-control" name="Married" required>
-      <option value="0">No</option>
-      <option value="1">Yes</option>
-    </select>
-      <br>
-    <label for="Dependents">Dependents</label>
-    <select id="Dependents" class="form-control" name="Dependents"required>
-      <option value = "0">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="">3</option>
-    </select>
-    <br>
-    <label for="Education">Education</label>
-    <select id="Education" class="form-control"name="Education" required>
-      <option value="0">Not Graduate</option>
-      <option value="1">Graduate</option>
-    </select>
-    <br>
-    <label for="Self_Employed">Self Employed</label>
-    <select id="Self_Employed"class="form-control" name="Self_Employed" required>
-      <option value="0">No</option>
-      <option value="1">Yes</option>
-    </select>
-    <br>
-    <label for="Credit_History">Credit History</label>
-    <select id="Credit_History" class="form-control" name="Credit_History" required>
-      <option value="0">No</option>
-      <option value="1">Yes</option>
-    </select>
-    <br>
-    <label for="Property_Area">Property Area</label>
-    <select id="Property_Area" class="form-control" name="Property_Area" required>
-      <option value="0">Rural</option>
-      <option value="1">Semiurban</option>
-      <option value="2">Urban</option>
-    </select>
-   <br>
-    
-      <input type="reset" value="Reset"/>
-    <input class="btn btn-primary" type="submit" value="Submit">
-    </div>
-    <!--Prediction Result-->
-    <div id ="result">
-      <strong style="color:red">{{result}}</strong>
+  <!--Prediction Result-->
+  <div id="result">
+    <strong style="color:red">{{result}}</strong>
     </feildset>
-   </div>
+  </div>
   </form>
 </main>
 </div>
 </body>
+
 </html>

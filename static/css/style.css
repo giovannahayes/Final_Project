@@ -11,6 +11,7 @@
 
     /* --> Toggle bar --> */
 .navigation .navbar-brand{
+    overflow: hidden;
 	color: white; 
 	margin-left: 50px; 
 	padding: inherit; 
@@ -22,6 +23,7 @@
 
 /* --> Toggle bar --> */
 .collapse .nav-link{
+    overflow: hidden;
     color: white; 
     max-height: 100px; 
     background-color: black;
@@ -54,33 +56,9 @@ form  {
   }
 
 
-  /* h1
-{
-  margin-top: 100px;  /* or whatever amount you need it to move down */
-  /* color: black */
-/* } */ *
-
 .text-info {
     color:black
 }
-
-/* Ourstory HTML Format */
-
-/* main{
-    width: 700px;
-    margin: 50 px auto
-}
-
-h1{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black
-} */
-  
-  /* input {
-    margin: 5px;
-  } */
-
 
 h3, article{
     line-height: 30px; 
@@ -139,9 +117,7 @@ img{
 td {
     word-break:break-all;
 }
-/* th {
-    word-break:break-all;
-} */
+
 .footer {
     position: fixed;
     left: 0;
@@ -154,7 +130,7 @@ td {
 
 
 @media screen and (max-width: 992px) {
-    /* start of large tablet styles
+     /* start of large tablet styles */
     .img-responsive {
       min-width: 44%;
     }
@@ -179,7 +155,7 @@ td {
         list-style: none;
         background-color: white;
     }
-}
+
 
 @media screen and (max-width: 576px) {
     /* start of phone styles */
@@ -205,13 +181,13 @@ td {
         color: white(0,0,0,0.9);
         background: black
     }
-    }
+    
 
     
 
 
-/* Media Queries */
-/* @media (max-width: 991.98px){
+Media Queries
+ @media (max-width: 991.98px){
     .navbar-expand-lg{
         background-color: #054833;
     }
@@ -230,11 +206,11 @@ td {
     button{
         margin-left: auto; 
     }
-    
+     
     button:focus {
         outline: 1px dotted;
     }
-    }
+
     
     .description-content {
         margin-top: 30px;
@@ -252,7 +228,7 @@ td {
         background-color: white;
     }
     .description-header, .imageNav-header { */
-        /* padding-top: 15px; 
+         padding-top: 15px; 
         padding-left: 4px;
         color: #053324;
         font-size: 26px;
@@ -263,9 +239,9 @@ td {
     img{
         width: 100%;
         height: 100%;
-    } */
+    } 
     
-    /* .description-image {
+    .description-image {
         float: left;
         width: 60%;
         height: 60%;
@@ -281,4 +257,4 @@ td {
     .active, .imageNav-photo:hover{
         border-color:#053324;
         border-style: solid; 
-    } */ 
+    }   

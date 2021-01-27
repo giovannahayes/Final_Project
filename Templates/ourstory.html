@@ -6,45 +6,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS  -->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
- <!-- <link rel="stylesheet" href="'static', filename = 'css/style.css'"> -->
-  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/style.css')}}"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="'static', filename = 'css/style.css'"> -->
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/style.css')}}">
   <style>
+    body {
+      background-image: url(https://computrack.ca/wp-content/uploads/2015/07/White-office-Background.jpg);
+    }
 
-
-
-
-  body {
-    background-image: url(https://computrack.ca/wp-content/uploads/2015/07/White-office-Background.jpg);
-  } 
-  /* includes headers, pictures, and text   */
-  main{
-      width: 700px;
+    /* includes headers, pictures, and text   */
+    main {
+      width: 800px;
       margin: 50px auto;
     }
-    h1{
+
+    h1 {
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
       color: black
     }
 
-    h2{
+    h2 {
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
       color: black;
       font-size: 28
     }
 
-    p{
-      text-align:center;
+    p {
+      text-align: center;
       font-family: Arial, Helvetica, sans-serif;
       color: black;
       font-size: 20px
     }
-
-    
-
   </style>
 
 
@@ -54,51 +49,51 @@
 
   <!-- Start of navbar  -->
   <header>
-   <div class="navigation">
-     <nav class="navbar fixed-top navbar-expand-lg navbar-Dark">
-       <a class="navbar-brand ml-4" href="/">Home</a>
-       <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-       ​
-       <!-- Collect the nav links, forms, and other content for toggling -->
-       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-         <ul class="navbar-nav ml-auto">
-           <li class="nav-item mr-4">
-             <a class="nav-link" href="/project">Our Project</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="/data">Data</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="/visualizations">Visualizations</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="/models">Machine Learning Models</a>
-           </li>
-         </ul>
-       </div>
-     </nav>
- </header>
- </div>
+    <div class="navigation">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-Dark">
+        <a class="navbar-brand ml-4" href="/">Home</a>
+        <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        ​
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="/project">Our Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/data">Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/visualizations">Visualizations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/models">Machine Learning Models</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+  </div>
 
   <main>
-   
 
-      <h1 class="loan-project">Loan Prediction Project</h1>
-      <h2 class="team-devas"><u>Team Devas</u></h2>
+
+    <h1 class="loan-project"><b>Loan Prediction Project</b></h1>
+    <!-- <h2 class="team-devas"><u><b>Team Devas</b></u></h2> -->
     </header>
 
     <div>
       <article class="deva-pics">
         <a href="/project">
-          <img src="static/images/Gianna7.png" alt="Alicia" width="230" height="230">
+          <img src="static/images/Gianna7.png" alt="Alicia" width="200" height="200">
         </a>
         <a href="images/Alicia.png">
-          <img src="static/images/Pooja10.png" alt="Alicia" width="230" height="230"></a>
+          <img src="static/images/Pooja10.png" alt="Alicia" width="200" height="200"></a>
         <a href="images/Alicia.png">
-          <img src="static/images/Alicia7.png" alt="Alicia" width="230" height="230">
+          <img src="static/images/Alicia7.png" alt="Alicia" width="200" height="200">
         </a>
       </article>
 
@@ -112,20 +107,14 @@
           be a very tedious task. With the help of machine learning algorithms, lenders can adopt this techonolgy to
           help
           determine loan eligiblity in a very efficient way.
-      </b></p>
+        </b></p>
 
-      <h2><u><b></b>Objective</u></b></u></h2>
+      <h2><u><b>Objective</u></b></h2>
       <p><b>The objective of our project is to develop an end to end web application that helps determine the chances of
           a
           user on getting approved for a loan in real time.</b></p>
+      <img src="static/images/bernie2.png" alt="Alicia" width="500" height="500" class="center">
 
-
-      <h2><u>Structure</u></h2>
-
-      <article>
-        <a target="_blank" href="images/Alicia.png">
-          <img src="static/images/Flowchart.png" alt="Alicia" width="600" height="600" class="center">
-      </article>
   </main>
   </div>
 </body>
