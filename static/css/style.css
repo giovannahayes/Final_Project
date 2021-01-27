@@ -12,21 +12,21 @@
     /* --> Toggle bar --> */
 .navigation .navbar-brand{
     overflow: hidden;
-	color: white; 
+	color: black; 
 	margin-left: 50px; 
 	padding: inherit; 
     font-weight: bold; 
     max-height: 70px; 
-	background-color: black;
+	background-color: white;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 /* --> Toggle bar --> */
 .collapse .nav-link{
     overflow: hidden;
-    color: white; 
+    color: black; 
     max-height: 100px; 
-    background-color: black;
+    background-color: white;
 	margin-left: 70px; 
 	padding: inherit; 
 	font-weight: bold; 
@@ -143,7 +143,7 @@ td {
       min-width: 100%;
     }
     .navbar {
-        background-color: teal !important;
+        background-color: white !important;
       }
     .navbar-nav {
         display: -ms-flexbox;
@@ -164,7 +164,7 @@ td {
       min-width: 100%;
     }
     .navbar {
-        background-color: teal !important;
+        background-color: white!important;
       }
     
     .navbar-nav {
@@ -179,14 +179,14 @@ td {
     }
     a#navbarDropdownMenuLink.nav-link.dropdown-toggle{
         color: white(0,0,0,0.9);
-        background: black
+        background: white
     }
     
 
     
 
-
-Media Queries
+/* 
+Media Queries */
  @media (max-width: 991.98px){
     .navbar-expand-lg{
         background-color: #054833;
@@ -227,7 +227,7 @@ Media Queries
         color: black;
         background-color: white;
     }
-    .description-header, .imageNav-header { */
+    .description-header, .imageNav-header { 
          padding-top: 15px; 
         padding-left: 4px;
         color: #053324;
@@ -248,7 +248,7 @@ Media Queries
     }
     
     p{
-        color: #414d4a;
+        color: black;
         font-size: 14px;
         font-family: Arial, Helvetica, sans-serif;
     }
