@@ -6,8 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="style.css"> -->
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/style.css')}}">
   <style>
@@ -48,9 +49,10 @@
 <body>
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;" >
-    <a class="navbar-brand ml-4"  href="/">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand ml-4" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -61,52 +63,59 @@
         <li class="nav-item mr-4">
           <a class="nav-link" href="/data">Data</a>
         </li>
-          <li class="nav-item mr-4">
-            <a class="nav-link" href="/visualizations">Visualizations</a>
-          </li>
-          <li class="nav-item mr-4">
-            <a class="nav-link" href="/models">Machine Learning Models</a>
-          </li>
+        <li class="nav-item mr-4">
+          <a class="nav-link" href="/visualizations">Visualizations</a>
+        </li>
+        <li class="nav-item mr-4">
+          <a class="nav-link" href="/models">Machine Learning Models</a>
+        </li>
       </ul>
     </div>
   </nav>
 
 
-         
+
 
   <main>
+  </div>
+  
+          <h2><b>Exploratory Data Analysis(EDA)</b></h2>
 
-    <h2><b>Exploratory Data Analysis(EDA)</b></h2>
+          <img src="static/images/Bar chart of Loan Status.png" alt="Loan Status" width="350" height="350">
+          <img src="static/images/Count of Loan approval by Gender.png" alt="Gender" width="350" height="350">
+          <img src="static/images/Barchart of Education.png" alt="Gender" width="350" height="350">
 
-    <img src="static/images/Bar chart of Loan Status.png" alt="Loan Status" width="350" height="350">
-    <img src="static/images/Count of Loan approval by Gender.png" alt="Gender" width="350" height="350">
-    <img src="static/images/Barchart of Education.png" alt="Gender" width="350" height="350">
-
-    <p><b>30% of loan applicants in the dataset were denined and 70% were approved. Of those that were approved, 85% of
-        those applicants were male. 22% of loan applicants did not graduate.
-        There is a correlation between the rate of approval and the penetration of loan applicants who did graduate.</b>
-    </p>
+          <p><b>30% of loan applicants in the dataset were denined and 70% were approved. Of those that were approved,
+              85% of
+              those applicants were male. 22% of loan applicants did not graduate.
+              There is a correlation between the rate of approval and the penetration of loan applicants who did
+              graduate.</b>
+          </p>
 
 
-    <img src="static/images/Boxplot of Loanstatus depends on ApplicantIncome.png" alt="Loan Status" width="350"
-      height="350">
-    <img src="static/images/Boxplot of Loanstatus depends on LoanAmount.png" alt="Boxplot Loanamoutn" width="350"
-      height="350">
-    <img src="static/images/Boxplot of Education level against ApplicantIncome.png" alt="Boxplot ApplicationINcome"
-      width="350" height="350">
-    <p><b>Our box plot charts helped us to understand where our outliers exist within our dataset and across our
-        correlated metrics. The applicants who graduated
-        do not have a standarized mean and a great range of outliers with where these graduates are positioned with
-        their annual income. There are similarities with where
-        the mean falls with our dataset's loan applicant's income and redquested loan amount. The means are similar and
-        outlier range is limited.</b></p>
+          <img src="static/images/Boxplot of Loanstatus depends on ApplicantIncome.png" alt="Loan Status" width="350"
+            height="350">
+          <img src="static/images/Boxplot of Loanstatus depends on LoanAmount.png" alt="Boxplot Loanamoutn" width="350"
+            height="350">
+          <img src="static/images/Boxplot of Education level against ApplicantIncome.png"
+            alt="Boxplot ApplicationINcome" width="350" height="350">
+          <p><b>Our box plot charts helped us to understand where our outliers exist within our dataset and across our
+              correlated metrics. The applicants who graduated
+              do not have a standarized mean and a great range of outliers with where these graduates are positioned
+              with
+              their annual income. There are similarities with where
+              the mean falls with our dataset's loan applicant's income and redquested loan amount. The means are
+              similar and
+              outlier range is limited.</b></p>
 
-    <img src="static/images/Heatmap.png" alt="Loan Status" width="350" height="350">
-    <p><b>The heatmap above was used to check for multicollinearity. The heat map does not indicate a high correclation
-        between any of the loan attributes. This indicates no possible problem of the
-        multicollinearity nor a need for further investigation. </b>
-    </p>
-
+          <img src="static/images/Heatmap.png" alt="Loan Status" width="350" height="350">
+          <p><b>The heatmap above was used to check for multicollinearity. The heat map does not indicate a high
+              correclation
+              between any of the loan attributes. This indicates no possible problem of the
+              multicollinearity nor a need for further investigation. </b>
+          </p>
+      
+      </div>
 </body>
 
 </html>
@@ -116,8 +125,8 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" -->
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin = "anonymous" ></script>
 </body>
-
